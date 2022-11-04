@@ -72,16 +72,16 @@ class WordActivity : AppCompatActivity() {
 
     fun checkTopic (topic : String, rusActive : Boolean, engActive : Boolean) : ListAdapter {
         if (topic == "Reign") {
-            return ListAdapter(this, listOfWords.returnListReigns(), rusActive, engActive)
+            return ListAdapter(this, listOfWords.returnListReigns(), engActive, rusActive)
         } else if (topic == "Math") {
-            return ListAdapter(this, listOfWords.returnListMath(), rusActive, engActive)
+            return ListAdapter(this, listOfWords.returnListMath(), engActive, rusActive)
         } else if (topic == "Animals") {
-            return ListAdapter(this, listOfWords.returnListAnimals(), rusActive, engActive)
+            return ListAdapter(this, listOfWords.returnListAnimals(), engActive, rusActive)
         } else if (topic == "Culture") {
-            return ListAdapter(this, listOfWords.returnListCulture(), rusActive, engActive)
+            return ListAdapter(this, listOfWords.returnListCulture(), engActive, rusActive)
         }else if (topic == "Brain") {
-            return ListAdapter(this, listOfWords.returnListBrain(), rusActive, engActive)
+            return ListAdapter(this, listOfWords.returnListBrain(), engActive, rusActive)
         }
-        return ListAdapter(this, listOfWords.returnListReigns(), rusActive, engActive)
+        return ListAdapter(this, listOfWords.returnListReigns(), engActive, rusActive)
     }
 }
